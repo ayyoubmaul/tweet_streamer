@@ -1,0 +1,7 @@
+version: '3'
+services:
+  streamer:
+    build: .
+    env_file: .env
+    ports:
+      - "8089:8089"
