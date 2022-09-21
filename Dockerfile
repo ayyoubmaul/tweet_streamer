@@ -9,6 +9,4 @@ WORKDIR /code
 
 RUN pip install -r requirements.txt
 
-# EXPOSE 8089
-
-CMD ["python", "-u", "stream_topics.py"]
+CMD ["python", "-u", "stream_topics.py", "--topic", "any topic here, ex: bjorka"]

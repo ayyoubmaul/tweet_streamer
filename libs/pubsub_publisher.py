@@ -2,6 +2,7 @@ from google.cloud import pubsub_v1
 from google.oauth2 import service_account
 from os import environ
 
+
 class PublishMessage():
 
     def __init__(self, data, topic, **kwargs) -> None:
@@ -14,8 +15,6 @@ class PublishMessage():
 
         publisher = pubsub_v1.PublisherClient(credentials=credentials)
 
-        # The `topic_path` method creates a fully qualified identifier
-        # in the form `projects/{project_id}/topics/{topic_id}`
         topic_path = publisher.topic_path(self.project_id, self.topic_id)
 
         # Data must be a bytestring

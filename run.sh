@@ -22,4 +22,4 @@ jq '.' $pubsub_sa > pubsub_sa.json
 docker-compose up --build --force-recreate
 
 > .env
-'{}' > pubsub_sa.json
+echo '{}' > pubsub_sa.json
